@@ -47,6 +47,10 @@
                             <imageView contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="defaultPhoto" translatesAutoresizingMaskIntoConstraints="NO" id="hx7-Q1-uEu">
                                 <rect key="frame" x="16" y="169" width="320" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="Sms-Oc-j1Q" appends="YES" id="Aiq-G5-giL"/>
+                                </connections>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -60,9 +64,15 @@
                     <connections>
                         <outlet property="mealNameLabel" destination="ejF-mj-bQd" id="epI-Nl-UXT"/>
                         <outlet property="nameTextField" destination="kqU-Lz-4IS" id="Xqr-06-Gwx"/>
+                        <outlet property="photoImageView" destination="hx7-Q1-uEu" id="ugd-rE-PRF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="Sms-Oc-j1Q">
+                    <connections>
+                        <action selector="selectImageFromPhotoLibrary:" destination="BYZ-38-t0r" id="62z-d6-27A"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="132.68365817091455"/>
         </scene>
